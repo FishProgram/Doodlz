@@ -13,4 +13,11 @@ public class DoodleView extends View {
     public DoodleView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
+
+    public void saveImage(){
+
+    }
+
+    public void printImage() {
+    }
 }
