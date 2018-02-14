@@ -34,8 +34,7 @@ public class MainActivityFragment extends Fragment {
 
     private static final int SAVE_IMAGE_PERMISSION_REQUEST_CODE = 1;
 
-    public MainActivityFragment() {
-    }
+
 
     public  DoodleView getDoodleView(){
         return doodleView;
@@ -100,7 +99,7 @@ public class MainActivityFragment extends Fragment {
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.doodle_fragment_menu,menu);
+        inflater.inflate(R.menu.doodle_fragment_menu, menu);
     }
 
     private void enableAccelerometerListening() {
@@ -160,6 +159,7 @@ public class MainActivityFragment extends Fragment {
                         requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, SAVE_IMAGE_PERMISSION_REQUEST_CODE);
                     }
                 });
+                builder.create().show();
             }
             else{
                 requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, SAVE_IMAGE_PERMISSION_REQUEST_CODE);
